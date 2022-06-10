@@ -27,7 +27,7 @@ fn main() -> Result<()> {
             hInstance: GetModuleHandleA(None)?,
             hIcon: HICON(0),
             hCursor: LoadCursorW(None, IDC_ARROW)?,
-            hbrBackground: HBRUSH(6), // COLOR_WINDOW + 1
+            hbrBackground: HBRUSH(6), // FIXME: This should be COLOR_WINDOW + 1. Can't figure out how to do it in rust
             lpszMenuName: PCSTR(b"\0".as_ptr()),
             lpszClassName: PCSTR(b"MainWindow\0".as_ptr()),
             hIconSm: HICON(0),
